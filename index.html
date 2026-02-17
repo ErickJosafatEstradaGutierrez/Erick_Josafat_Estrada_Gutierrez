@@ -2,28 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Erick Josafat Estrada Gutierrez | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erick Josafat Estrada Gutierrez | Software Engineer</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Librerías -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
+  <!-- Fondo animado -->
+  <div id="particles-js"></div>
+
+  <!-- HERO -->
   <header class="hero">
     <h1 class="typing"></h1>
-    <p>Ingeniería en Desarrollo y Gestión de Software</p>
+    <p class="subtitle">Ingeniería en Desarrollo y Gestión de Software</p>
     <span class="badge">21 años • Full Stack Developer • Líder de Proyecto</span>
+
+    <div class="hero-buttons">
+      <a href="cv.pdf" download class="btn">Descargar CV</a>
+      <button onclick="toggleTheme()" class="btn-outline">🌙 Modo</button>
+    </div>
   </header>
 
+  <!-- SOBRE MI -->
   <section class="about">
     <h2>Sobre mí</h2>
     <p>
       Ingeniero egresado de la Universidad Tecnológica de Querétaro (UTEQ),
       especializado en desarrollo full stack, arquitectura de sistemas empresariales
       y automatización de procesos organizacionales.
+      Experiencia liderando proyectos tecnológicos y desarrollando soluciones
+      empresariales de alto impacto.
     </p>
   </section>
 
+  <!-- EXPERIENCIA -->
   <section class="experience">
     <h2>Casos de Éxito</h2>
 
@@ -34,8 +54,8 @@
         operativos desde Word y Excel hacia un sistema cerrado empresarial.
         Implementación de órdenes de servicio, cotizaciones y dashboards analíticos.
       </p>
-      <span>Rol: Full Stack Developer & Líder de Proyecto</span>
-      <a href="https://www.todonuno.com/" target="_blank">Visitar sitio</a>
+      <span class="role">Rol: Full Stack Developer & Líder de Proyecto</span>
+      <a href="https://www.todonuno.com/" target="_blank" class="link">Visitar sitio</a>
     </div>
 
     <div class="card">
@@ -44,33 +64,52 @@
         Migración de sistemas internos de cotización, inventario y gestión de costos.
         Integración con Gmail para notificaciones automáticas y gestión de tickets.
       </p>
-      <span>Rol: Backend & Automatización Empresarial</span>
+      <span class="role">Rol: Backend & Automatización Empresarial</span>
     </div>
 
     <div class="card highlight">
-      <h3>Mapa Interactivo UTEQ</h3>
+      <h3>Proyecto Geoespacial UTEQ</h3>
       <p>
-        Desarrollo de sistema geoespacial para la Universidad Tecnológica de Querétaro.
-        Proyecto becado y difundido en redes oficiales.
+        Desarrollo de sistema geoespacial institucional.
+        Proyecto becado y difundido en redes oficiales de la universidad.
       </p>
-      <span>Reconocimiento académico y cartas de recomendación laboral</span>
+      <span class="role">Reconocimiento académico y cartas de recomendación</span>
     </div>
 
   </section>
 
+  <!-- GRÁFICA -->
+  <section class="stats">
+    <h2>Impacto Profesional</h2>
+    <canvas id="myChart"></canvas>
+  </section>
+
+  <!-- RECONOCIMIENTOS -->
   <section class="recognition">
     <h2>Reconocimientos</h2>
     <ul>
-      <li>Becado por desarrollo tecnológico en UTEQ</li>
+      <li>Becado por desarrollo tecnológico</li>
       <li>Cartas de recomendación laboral</li>
       <li>Reconocimientos institucionales</li>
     </ul>
+
+    <button onclick="openModal()" class="btn">Ver Evidencias</button>
   </section>
 
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">✖</span>
+      <img src="reconocimiento1.jpg" alt="Reconocimiento 1">
+      <img src="reconocimiento2.jpg" alt="Reconocimiento 2">
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Erick Josafat Estrada Gutierrez</p>
   </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
