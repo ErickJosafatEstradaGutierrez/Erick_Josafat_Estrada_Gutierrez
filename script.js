@@ -1,57 +1,40 @@
-// Typing effect
+// Typing effect for Hero (optional but recommended)
 const text = "Erick Josafat Estrada Gutierrez";
 let i = 0;
+const speed = 80;
 
 function typeWriter() {
   if (i < text.length) {
-    document.querySelector(".typing").innerHTML += text.charAt(i);
+    document.querySelector(".hero-title").innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeWriter, 80);
+    setTimeout(typeWriter, speed);
   }
 }
 
-// Particles
+window.onload = typeWriter;
+
+// Activate particles effect
 particlesJS("particles-js", {
   particles: {
     number: { value: 60 },
-    color: { value: "#38bdf8" },
     size: { value: 3 },
     move: { speed: 1 },
     line_linked: { enable: true }
   }
 });
 
-// Chart
-const ctx = document.getElementById('myChart');
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['CCTV', 'Inventario', 'Cotizaciones', 'Automatización'],
-    datasets: [{
-      data: [85, 70, 90, 95],
-      backgroundColor: "#38bdf8"
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: { legend: { display: false } }
-  }
-});
+// Scroll Reveal Animation
+const reveals = document.querySelectorAll(".reveal");
 
-// Scroll animation
-const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add("show");
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const revealTop = el.getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      el.classList.add("active");
     }
   });
 });
 
-// Theme toggle
-function toggleTheme() {
-  document.body.classList.toggle("light");
-}
-
-window.onload = typeWriter;

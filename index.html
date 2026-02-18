@@ -3,66 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erick Josafat Estrada Gutierrez | Software Engineer</title>
+  <title>Erick Josafat Estrada Gutierrez | Portfolio</title>
 
-  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Librerías -->
+  
+  <!-- Librerías visuales -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
+  <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- HERO -->
+  <!-- HEADER -->
   <header class="hero">
-    <h1 class="typing"></h1>
-    <p class="subtitle">Ingeniería en Desarrollo y Gestión de Software</p>
-    <span class="badge">21 años • Full Stack Developer • Líder de Proyecto</span>
-
-    <div class="hero-buttons">
-      <a href="cv.pdf" download class="btn">Descargar CV</a>
-      <button onclick="toggleTheme()" class="btn-outline">🌙 Modo</button>
-    </div>
+    <h1 class="hero-title"></h1>
+    <p class="hero-subtitle">Ingeniería en Desarrollo y Gestión de Software</p>
+    <span class="hero-badge">Full Stack Developer • Líder de Proyecto</span>
   </header>
 
   <!-- SOBRE MI -->
-  <section>
-    <h2>Sobre mí</h2>
-    <p>
-      Ingeniero egresado de la Universidad Tecnológica de Querétaro (UTEQ),
-      especializado en desarrollo full stack y automatización empresarial.
-      Experiencia liderando proyectos tecnológicos de alto impacto.
+  <section class="about-tech">
+  <div class="about-container">
+    <h2 class="reveal">Formación Académica</h2>
+
+    <p class="reveal">
+      Ingeniero en Desarrollo y Gestión de Software egresado de la 
+      <span class="highlight">Universidad Tecnológica de Querétaro (UTEQ)</span>, 
+      institución enfocada en la formación de líderes de proyecto con visión estratégica y técnica.
     </p>
+
+    <p class="reveal">
+      Formación orientada a liderazgo de equipos, generación de documentación técnica 
+      (<span class="highlight">UML</span>, diagramas de flujo, arquitecturas de software) 
+      y construcción de soluciones empresariales escalables.
+    </p>
+
+    <div class="tech-stack reveal">
+      <span>Python</span>
+      <span>Angular</span>
+      <span>Django</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>SQL</span>
+      <span>NoSQL</span>
+      <span>Docker</span>
+      <span>Ubuntu</span>
+      <span>Ubuntu Server</span>
+    </div>
+
+    <p class="reveal">
+      Experiencia en mantenimiento y optimización de software en producción, 
+      configuración de servidores y despliegue de entornos empresariales.
+    </p>
+  </div>
+</section>
+
+
+  <!-- PORTAFOLIO -->
+  <section class="section portfolio">
+    <div class="container">
+      <h2>Proyectos Destacados</h2>
+      <p class="section-subtitle">Aplicaciones reales construidas y desplegadas</p>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+          <img src="images/todo-n1.png" alt="TodoN1">
+          <div class="portfolio-info">
+            <h3 class="project-title">
+            TodoN1
+            <span class="divider">|</span>
+            <img src="images/TodoN1.png" alt="TodoN1 Logo" class="company-logo">
+            </h3>
+
+            <p>Sistema con dashboard, órdenes, cotizaciones y métricas analíticas.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="images/rg360.png" alt="RG Implementaciones 360">
+          <div class="portfolio-info">
+            <h3 class="project-title">
+            Implementaciones 360
+            <span class="divider">|</span>
+            <img src="images/360.png" alt="RG360 Logo" class="company-logo">
+            </h3>
+
+            <p>Automatización de cotizaciones, inventario y notificaciones por email.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="images/mapa-uteq.png" alt="Mapa Interactivo UTEQ">
+          <div class="portfolio-info">
+            <h3 class="project-title">
+            UTEQ
+            <span class="divider">|</span>
+            <img src="images/uteq.jpg" alt="UTEQ Logo" class="company-logo">
+            </h3>
+
+            <p>Sistema geoespacial galardonado en la Universidad Tecnológica de Qro.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <!-- EXPERIENCIA -->
-  <section>
-    <h2>Casos de Éxito</h2>
-
-    <div class="card">
-      <h3>TodoN1</h3>
-      <p>Sistema empresarial completo con dashboards y órdenes digitales.</p>
-    </div>
-
-    <div class="card">
-      <h3>RG Implementaciones 360</h3>
-      <p>Sistema de cotizaciones, inventario y notificaciones automáticas.</p>
-    </div>
-
-    <div class="card highlight">
-      <h3>Proyecto Geoespacial UTEQ</h3>
-      <p>Proyecto becado y reconocido institucionalmente.</p>
-    </div>
-  </section>
-
-  
-
-  <footer>
+  <!-- FOOTER -->
+  <footer class="footer">
     <p>© 2026 Erick Josafat Estrada Gutierrez</p>
   </footer>
 
