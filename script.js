@@ -88,16 +88,16 @@ const description = document.getElementById("experience-description");
 
 const experiences = [
   {
-    title: "Proyecto Empresarial",
-    text: "Durante este proyecto me sentí retado técnicamente. Lideré la arquitectura del sistema y logramos automatizar procesos clave, reduciendo tiempos en un 40%."
+    title: "Proyecto implementado UTEQ",
+    text: "Durante este proyecto me sentí retado técnicamente. Lideré el proyecto y logramos satisfacer las necesidades de la iniversidad para poder implementar la herramienta"
   },
   {
     title: "Implementación en Producción",
-    text: "Experimenté presión real de entorno productivo. Aprendí sobre despliegue en servidor y optimización. El resultado fue un sistema estable y escalable."
+    text: "Se noto el apoyo por parte del rector Dr. Luis Fernando Pantoja Amaro, ya que no despues de mucho tiempo se implementaron señaleticas para anunciar nuestra herramienta."
   },
   {
     title: "Reconocimiento Académico",
-    text: "Sentí orgullo al ver el impacto del sistema en la universidad. Fue reconocido por su innovación y eficiencia en visualización geoespacial."
+    text: "Sentí orgullo al ver el impacto del dentro de la universidad. Fue reconocido por su innovación y eficiencia en visualización geoespacial."
   }
 ];
 
