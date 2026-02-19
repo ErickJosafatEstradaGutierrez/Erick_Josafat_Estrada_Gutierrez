@@ -12,16 +12,26 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
+  
+
+
 <body>
+
+     
 
   <!-- Particles Background -->
   <div id="particles-js"></div>
 
   <!-- HEADER -->
   <header class="hero">
+
+    <div class="profile-container">
+        <img src="images/erick.png" alt="Erick Estrada" class="profile-pic">
+    </div>
+
     <h1 class="hero-title"></h1>
     <p class="hero-subtitle">Ingeniería en Desarrollo y Gestión de Software</p>
-    <span class="hero-badge">Full Stack Developer • Líder de Proyecto</span>
+    <span class="hero-badge">Full Stack Developer • Líder de Proyectos</span>
   </header>
 
   <!-- SOBRE MI -->
@@ -52,6 +62,9 @@
       <span>Docker</span>
       <span>Ubuntu</span>
       <span>Ubuntu Server</span>
+      <span>SQL</span>
+      <span>MongoDB</span>
+      <span>MySSQLServer</span>
     </div>
 
     <p class="reveal">
@@ -113,11 +126,80 @@
     </div>
   </section>
 
+  <!-- EXPERIENCIA DESTACADA -->
+<section class="section experience-showcase">
+  <div class="container">
+
+    <h2>Experiencia Destacada</h2>
+    <p class="section-subtitle">Momentos clave en mi crecimiento profesional</p>
+
+    <div class="showcase-box">
+
+      <div class="showcase-images">
+        <img src="images/exp1.jpeg" class="active">
+        <img src="images/exp2.jpeg">
+        <img src="images/exp3.jpeg">
+      </div>
+
+      <div class="showcase-content">
+        <h3 id="experience-title">Proyecto Empresarial</h3>
+        <p id="experience-description">
+          Durante este proyecto experimenté un gran crecimiento profesional...
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- RECOMENDACIONES -->
+<section class="section recommendations">
+  <div class="container">
+    <h2>Recomendaciones</h2>
+    <p class="section-subtitle">Cartas de recomendación profesional</p>
+
+    <div class="recommendation-grid">
+
+      <div class="recommendation-item">
+        <img src="images/carta1-preview.png" alt="Carta de Recomendación 1">
+        <div class="overlay">
+          <span>Da clic para ampliar</span>
+        </div>
+      </div>
+
+      <div class="recommendation-item">
+        <img src="images/carta2-preview.png" alt="Carta de Recomendación 2">
+        <div class="overlay">
+          <span>Da clic para ampliar</span>
+        </div>
+      </div>
+
+      <div class="recommendation-item">
+        <img src="images/carta3-preview.png" alt="Carta de Recomendación 2">
+        <div class="overlay">
+          <span>Da clic para ampliar</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 Erick Josafat Estrada Gutierrez</p>
   </footer>
 
+
+  <!-- MODAL -->
+  <div id="docModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>

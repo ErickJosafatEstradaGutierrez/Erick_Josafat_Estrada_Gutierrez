@@ -1,40 +1,118 @@
-// Typing effect for Hero (optional but recommended)
-const text = "Erick Josafat Estrada Gutierrez";
-let i = 0;
-const speed = 80;
+document.addEventListener("DOMContentLoaded", function() {
 
-function typeWriter() {
-  if (i < text.length) {
-    document.querySelector(".hero-title").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+  /* ======================
+     TYPEWRITER EFFECT
+  ====================== */
+  const text = "Erick Josafat Estrada Gutierrez";
+  let i = 0;
+  const speed = 80;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.querySelector(".hero-title").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
   }
-}
 
-window.onload = typeWriter;
+  typeWriter();
 
-// Activate particles effect
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 60 },
-    size: { value: 3 },
-    move: { speed: 1 },
-    line_linked: { enable: true }
+
+  /* ======================
+     PARTICLES
+  ====================== */
+  if (typeof particlesJS !== "undefined") {
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        move: { speed: 1 },
+        line_linked: { enable: true }
+      }
+    });
   }
-});
 
-// Scroll Reveal Animation
-const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
-  reveals.forEach((el) => {
-    const windowHeight = window.innerHeight;
-    const revealTop = el.getBoundingClientRect().top;
-    const revealPoint = 100;
+  /* ======================
+     SCROLL REVEAL
+  ====================== */
+  const reveals = document.querySelectorAll(".reveal");
 
-    if (revealTop < windowHeight - revealPoint) {
-      el.classList.add("active");
+  window.addEventListener("scroll", () => {
+    reveals.forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (revealTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  });
+
+
+  /* ======================
+     MODAL RECOMENDACIONES
+  ====================== */
+  const modal = document.getElementById("docModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll(".recommendation-item").forEach(item => {
+    item.addEventListener("click", function() {
+      const img = this.querySelector("img");
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
     }
   });
+
 });
+
+/* ======================
+   EXPERIENCE SLIDER
+====================== */
+
+const images = document.querySelectorAll(".showcase-images img");
+const title = document.getElementById("experience-title");
+const description = document.getElementById("experience-description");
+
+const experiences = [
+  {
+    title: "Proyecto Empresarial",
+    text: "Durante este proyecto me sentí retado técnicamente. Lideré la arquitectura del sistema y logramos automatizar procesos clave, reduciendo tiempos en un 40%."
+  },
+  {
+    title: "Implementación en Producción",
+    text: "Experimenté presión real de entorno productivo. Aprendí sobre despliegue en servidor y optimización. El resultado fue un sistema estable y escalable."
+  },
+  {
+    title: "Reconocimiento Académico",
+    text: "Sentí orgullo al ver el impacto del sistema en la universidad. Fue reconocido por su innovación y eficiencia en visualización geoespacial."
+  }
+];
+
+let index = 0;
+
+function changeSlide() {
+  images.forEach(img => img.classList.remove("active"));
+
+  index = (index + 1) % images.length;
+
+  images[index].classList.add("active");
+
+  title.textContent = experiences[index].title;
+  description.textContent = experiences[index].text;
+}
+
+setInterval(changeSlide, 5000);
 
